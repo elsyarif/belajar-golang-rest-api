@@ -1,0 +1,3 @@
+Domain merupakan enterprise bisines layer, di dalam folder ini terdapat `model` (entities) dan abstrak/interfase repository.
+
+Tidak ada dependencies (sintak import) terhadap agen external seperti library/framework

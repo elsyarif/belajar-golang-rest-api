@@ -1,0 +1,3 @@
+Interface merupakan adapter atau jembatan penghubung antara use case dengan agen external, seperti
+HTTP server,
+Disini dapat mendefinisikan `Route` configuration dan juga `Handler` yang dibungkus dengan plugin/library/framework

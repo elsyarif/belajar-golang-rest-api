@@ -1,0 +1,2 @@
+Application merupakan Application Business Layer, di dalam folder ini terdapat alur bisnis yang kita definisikan dalam bentuk usecase.
+Dapat meletakan abstaksi atau interface dari service, helper, tools, dan lain yang digunakan oleh usecase

@@ -1,0 +1,2 @@
+Infrastucture merupakan letak agen external sperti Framework, Http Server, Database, JWT, Bcrypt, dan sebagainya,
+Di folder ini juga kita mendefinisikan concrete repository dari Domain, atau concrete service, helper, tools dari Application
