@@ -11,7 +11,7 @@ func RunServer() {
 
 	user.UserRoute(router)
 
-	err := router.Run(":8888")
+	err := router.Run("localhost:8888")
 	if err != nil {
 		return
 	}

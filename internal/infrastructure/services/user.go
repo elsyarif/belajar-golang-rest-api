@@ -2,6 +2,7 @@ package services
 
 import (
 	"context"
+
 	"github.com/elSyarif/belajar-golang-rest-api/internal/domain"
 	"github.com/elSyarif/belajar-golang-rest-api/internal/domain/model"
 	"github.com/elSyarif/belajar-golang-rest-api/internal/helper"
@@ -15,9 +16,13 @@ func NewUserService(r domain.UserRepository) domain.UserService {
 	return &userService{repository: r}
 }
 
-func (u *userService) Adduser(ctx context.Context, user *model.User) (model.User, error) {
+func (u *userService) Adduser(ctx context.Context, user *model.User) (*model.User, error) {
 	err := u.repository.AddUser(ctx, user)
 	helper.PanicError(err)
 
-	return *user, nil
+	return user, nil
+}
+
+func (service *userService) GetUser(ctx context.Context) (*[]model.User, error) {
+	return service.repository.GetUser(ctx)
 }

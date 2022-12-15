@@ -1,8 +1,8 @@
 package helper
 
-import "database/sql"
+import "github.com/jmoiron/sqlx"
 
-func Exec(tx *sql.Tx) {
+func Exec(tx *sqlx.Tx) {
 	err := recover()
 	if err != nil {
 		errorRoleback := tx.Rollback()

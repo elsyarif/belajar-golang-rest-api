@@ -17,12 +17,7 @@ func UserRoute(router *gin.Engine) *gin.Engine {
 	handler := NewUserHandler(service)
 
 	router.POST("/users", handler.AddUser)
-	router.GET("/users", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"code":   200,
-			"status": "OK",
-		})
-	})
+	router.GET("/users", handler.GetUser)
 
 	return router
 }
